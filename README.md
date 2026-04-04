@@ -66,3 +66,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Project Members
 - Student ID: 6432305 Matvei Kandalintsev
+- Student ID: 6435532 Nikita Kirillov
