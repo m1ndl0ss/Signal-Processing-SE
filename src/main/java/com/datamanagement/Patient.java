@@ -35,6 +35,10 @@ public class Patient {
      * @param timestamp        the time at which the measurement was taken, in
      *                         milliseconds since UNIX epoch
      */
+    public int getPatientId() {
+        return patientId;
+    }
+
     public void addRecord(double measurementValue, String recordType, long timestamp) {
         PatientRecord record = new PatientRecord(this.patientId, measurementValue, recordType, timestamp);
         this.patientRecords.add(record);
@@ -52,6 +56,12 @@ public class Patient {
      *         range
      */
     public List<PatientRecord> getRecords(long startTime, long endTime) {
-        return this.patientRecords;
+        List<PatientRecord> filteredRecords = new ArrayList<>();
+        for (PatientRecord record : this.patientRecords) {
+            if (record.getTimestamp() >= startTime && record.getTimestamp() <= endTime) {
+                filteredRecords.add(record);
+            }
+        }
+        return filteredRecords;
     }
 }
