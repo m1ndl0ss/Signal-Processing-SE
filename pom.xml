@@ -41,6 +41,7 @@
 
     </dependencies>
     <build>
+        <finalName>6432305_7654321_cardio_generator</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
